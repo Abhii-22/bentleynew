@@ -26,11 +26,17 @@ const Header = () => {
   };
 
   const handleHomeClick = (e) => {
+    closeMobileMenu();
+    
     if (location.pathname === '/') {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // For navigation from other pages, scroll to top after route change
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 100);
     }
-    closeMobileMenu();
   };
 
   const handleSmoothScroll = (e) => {

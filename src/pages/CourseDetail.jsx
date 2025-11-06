@@ -1,10 +1,27 @@
 import React, { useEffect } from 'react';
+import { FaPhoneAlt } from 'react-icons/fa';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import './CourseDetail.css';
 
 const CourseDetail = () => {
     const { courseId } = useParams();
   const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    // Navigate to home page first
+    navigate('/');
+    
+    // Then scroll to contact section after a short delay
+    setTimeout(() => {
+      const contactElement = document.getElementById('contact');
+      if (contactElement) {
+        contactElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }, 100);
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -69,7 +86,7 @@ const CourseDetail = () => {
       ]
     },
     'staad-pro': {
-      title: 'STAAD Pro Advanced',
+      title: 'STAAD Pro',
       category: 'Structural Analysis',
       description: 'Comprehensive structural analysis and design software for buildings, bridges, towers, and other structures with advanced modeling capabilities.',
       duration: '1 Months',
@@ -184,14 +201,14 @@ const CourseDetail = () => {
             </div>
             <div className="curriculum">
               <h2>Curriculum</h2>
-              <ul>
-                {course.curriculum.map((item, index) => (
-                  <li key={index}>
-                    <span className="module-number">{String(index + 1).padStart(2, '0')}</span>
-                    <span className="module-title">{item}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="contact-for-details">
+                <p>
+                  Want to learn more about our comprehensive curriculum? Our expert instructors are here to guide you through every aspect of Bentley training and help you achieve your career goals.
+                </p>
+                <button onClick={handleContactClick} className="contact-us-btn">
+                  <FaPhoneAlt /> CONTACT US FOR DETAILS
+                </button>
+              </div>
             </div>
             <div className="learning-outcomes">
               <h2>What You'll Learn</h2>
