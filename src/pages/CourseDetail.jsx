@@ -176,10 +176,12 @@ const CourseDetail = () => {
   return (
     <div className="course-detail-page">
       <div className="course-detail-container">
-                <button onClick={() => navigate(-1)} className="back-link">&larr; Back to Courses</button>
         <div className="course-detail-content">
           <main className="course-main-content">
-            <span className="course-category">{course.category}</span>
+            <div className="course-header">
+              <button onClick={() => navigate(-1)} className="back-link">&larr; Back to Courses</button>
+              <span className="course-category">{course.category}</span>
+            </div>
             <h1>{course.title}</h1>
             <p className="course-description">{course.description}</p>
             <div className="info-cards">
