@@ -6,7 +6,7 @@
   width: 100%;
   background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
   backdrop-filter: blur(20px);
-  padding: 1.2rem 2rem;
+  padding: 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -33,6 +33,26 @@
   max-width: 1400px;
   margin: 0 auto;
   position: relative;
+  padding: 0.8rem 2rem;
+}
+
+/* Secondary navigation */
+.secondary-nav {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.secondary-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 /* Logo */
@@ -43,9 +63,18 @@
   padding: 0.5rem 0;
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
 .logo-image {
   height: 40px; /* Adjust height as needed */
   transition: transform 0.3s ease;
+}
+
+.medini-logo {
+  height: 50px; /* Adjust height to be proportional */
 }
 
 .logo:hover .logo-image {
@@ -53,27 +82,11 @@
 }
 
 /* Menu items */
-
-.main-nav ul {
-  display: flex;
-  justify-content: center;
-  flex-grow: 1;
-  gap: 0.25rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 50px;
-  padding: 0.25rem;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.main-nav a {
+.secondary-nav a {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   font-weight: 600;
-  padding: 0.75rem 1.25rem;
+  padding: 0.5rem 1.25rem;
   border-radius: 50px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -93,23 +106,23 @@
   margin-right: 0.5rem; /* Add space between icon and text */
 }
 
-.main-nav a:hover .nav-icon {
+.secondary-nav a:hover .nav-icon {
   transform: scale(1.2);
 }
 
-.main-nav a:hover {
+.secondary-nav a:hover {
   color: #fff;
   background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
   transform: translateY(-1px);
   box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
 }
 
-.main-nav a:active {
+.secondary-nav a:active {
   transform: translateY(0);
 }
 
 /* Active state for current page */
-.main-nav a.active {
+.secondary-nav a.active {
   background: linear-gradient(135deg, #10b981 0%, #059669 100%);
   color: #fff;
   box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
@@ -117,9 +130,12 @@
 
 /* Scroll effect */
 .header.scrolled {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334135 100%);
   backdrop-filter: blur(20px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.header.scrolled .main-nav {
   padding: 0.8rem 2rem;
 }
 
@@ -128,7 +144,7 @@
   padding: 0.4rem 0.8rem;
 }
 
-.header.scrolled .main-nav a {
+.header.scrolled .secondary-nav a {
   padding: 0.6rem 1rem;
   font-size: 0.85rem;
 }
@@ -155,25 +171,25 @@
 
 /* Responsive: Mobile */
 @media (max-width: 768px) {
-  .header {
+  .main-nav {
     padding: 1rem 1.5rem;
+    justify-content: space-between;
   }
   
-  .main-nav {
-    flex-direction: row;
-    justify-content: space-between;
+  .secondary-nav {
+    position: relative;
   }
 
   .mobile-menu-btn {
     display: block;
   }
 
-  .main-nav ul {
+  .secondary-nav ul {
     position: fixed;
     top: 100%;
     left: 0;
     right: 0;
-    background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+    background: linear-gradient(135deg, #1e293b 0%, #334135 50%, #475569 100%);
     backdrop-filter: blur(20px);
     flex-direction: column;
     gap: 0;
@@ -187,13 +203,13 @@
     border-radius: 0 0 20px 20px;
   }
 
-  .main-nav ul.active {
+  .secondary-nav ul.active {
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
   }
 
-  .main-nav a {
+  .secondary-nav a {
     padding: 1rem 2rem;
     margin: 0.25rem 1rem;
     border-radius: 12px;
@@ -204,10 +220,14 @@
   .logo {
     font-size: 1.5rem;
   }
+
+  .medini-logo {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
-  .header {
+  .main-nav {
     padding: 0.75rem 1rem;
   }
   
@@ -215,7 +235,7 @@
     font-size: 1.3rem;
   }
   
-  .main-nav a {
+  .secondary-nav a {
     padding: 0.875rem 1.5rem;
     font-size: 0.9rem;
   }

@@ -57,10 +57,6 @@ const Header = () => {
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <nav className="main-nav">
-        <Link to="/" className="logo" onClick={closeMobileMenu}>
-          <img src="/images/Bentley White.png" alt="BentleyEdu Logo" className="logo-image" />
-        </Link>
-        
         <button 
           className="mobile-menu-btn" 
           onClick={toggleMobileMenu}
@@ -68,7 +64,19 @@ const Header = () => {
         >
           {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
+
+        <Link to="/" className="logo" onClick={closeMobileMenu}>
+          <img src="/images/medini.png" alt="Medini Logo" className="logo-image medini-logo" />
+        </Link>
         
+        <div className="logo-container">
+          <Link to="/" className="logo" onClick={closeMobileMenu}>
+            <img src="/images/Bentley White.png" alt="BentleyEdu Logo" className="logo-image" />
+          </Link>
+        </div>
+      </nav>
+      
+      <nav className="secondary-nav">
         <ul className={isMobileMenuOpen ? 'active' : ''}>
           <li>
             <Link to="/" onClick={handleHomeClick}>
