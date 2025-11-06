@@ -1,7 +1,7 @@
 /* ---------------- CONTACT SECTION ---------------- */
 .contact-section {
-  background: radial-gradient(circle at top left, #0f172a, #1e293b 70%);
-  color: #fff;
+  background: #ffffff;
+  color: #000000;
   padding: 6rem 2rem;
   font-family: 'Poppins', sans-serif;
   position: relative;
@@ -15,7 +15,7 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.1), transparent 60%);
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.05), transparent 60%);
   animation: float 10s infinite linear;
 }
 
@@ -34,10 +34,10 @@
 .contact-container {
   max-width: 1000px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.05);
   padding: 3rem;
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(15px);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
   text-align: center;
@@ -47,14 +47,11 @@
   font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  background: linear-gradient(90deg, #38bdf8, #06b6d4);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: rgb(35, 65, 75);
 }
 
 .contact-subtitle {
-  color: #cbd5e1;
+  color: #333333;
   margin-bottom: 3rem;
   font-size: 1.1rem;
 }
@@ -76,34 +73,34 @@
   display: flex;
   align-items: center;
   gap: 1.2rem;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.08);
   padding: 1.3rem;
   border-radius: 14px;
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .info-item:hover {
   transform: translateY(-5px);
-  border-color: #38bdf8;
-  box-shadow: 0 0 25px rgba(56, 189, 248, 0.3);
+  border-color: #0066cc;
+  box-shadow: 0 0 25px rgba(0, 102, 204, 0.3);
 }
 
 .info-icon {
   font-size: 1.8rem;
-  color: #38bdf8;
+  color: #0066cc;
 }
 
 .info-item h4 {
   font-size: 1rem;
   font-weight: 600;
   margin: 0;
-  color: #f8fafc;
+  color: #000000;
 }
 
 .info-item p {
   font-size: 0.95rem;
-  color: #cbd5e1;
+  color: #333333;
   margin: 0;
 }
 
@@ -117,19 +114,19 @@
 .social-links a {
   width: 40px;
   height: 40px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #38bdf8;
+  color: #0066cc;
   font-size: 1.2rem;
   transition: all 0.3s ease;
 }
 
 .social-links a:hover {
-  background: linear-gradient(135deg, #38bdf8, #06b6d4);
-  color: #fff;
+  background: linear-gradient(135deg, #0066cc, #0052a3);
+  color: #000000;
   transform: scale(1.1);
 }
 

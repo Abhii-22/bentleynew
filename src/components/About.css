@@ -1,6 +1,6 @@
 .about-section {
-  background: linear-gradient(180deg, #0b1b2a, #07111c);
-  color: #fff;
+  background: #ffffff;
+  color: #000000;
   padding: 6rem 2rem;
   font-family: 'Poppins', sans-serif;
   width: 100%;
@@ -46,7 +46,7 @@
 
 .about-intro-animated {
   font-size: 1.2rem;
-  color: #dcdcdc;
+  color: #333333;
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.8;
@@ -107,7 +107,7 @@
 .stat-card {
   flex: 1;
   min-width: 200px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.05);
   border-radius: 12px;
   text-align: center;
   padding: 1.5rem;
@@ -128,7 +128,7 @@
 }
 
 .stat-card p {
-  color: #ccc;
+  color: #333333;
   font-size: 1rem;
   margin-top: 0.5rem;
 }
@@ -143,16 +143,16 @@
 /* Text Section */
 .about-text-section {
   text-align: left;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.05);
   padding: 2rem;
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .about-text-section p {
-  color: #e8e8e8;
+  color: #333333;
   line-height: 1.8;
   margin-bottom: 1.2rem;
   font-size: 1.05rem;
@@ -167,7 +167,7 @@
 
 
 .highlight-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.05);
   border-left: 4px solid #ffd700;
   border-radius: 12px;
   padding: 1rem 1.5rem;
@@ -175,7 +175,7 @@
 }
 
 .highlight-card:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.1);
   transform: translateY(-5px);
 }
 
@@ -186,7 +186,7 @@
 }
 
 .highlight-card p {
-  color: #ccc;
+  color: #333333;
 }
 
 /* Responsive Design */
