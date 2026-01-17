@@ -1,12 +1,41 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FaBars, FaTimes, FaHome, FaInfoCircle, FaBook, FaEnvelope } from 'react-icons/fa';
+import { FaBars, FaTimes, FaHome, FaInfoCircle, FaBook, FaEnvelope, FaChevronDown } from 'react-icons/fa';
 import './Header.css';
+
+const courses = [
+  {
+    courseId: 'staad-pro',
+    title: 'STAAD Pro',
+    description: 'Structural analysis and design software'
+  },
+  {
+    courseId: 'sewergems',
+    title: 'OpenFlows SewerGEMS',
+    description: 'Sanitary and combined sewer systems'
+  },
+  {
+    courseId: 'microstation',
+    title: 'MicroStation',
+    description: '2D and 3D design and modeling'
+  },
+  {
+    courseId: 'openroads-designer',
+    title: 'OpenRoads Designer',
+    description: 'Civil infrastructure design'
+  },
+  {
+    courseId: 'watergems',
+    title: 'OpenFlows WaterGEMS',
+    description: 'Water distribution modeling'
+  }
+];
 
 const Header = () => {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isCoursesDropdownOpen, setIsCoursesDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,6 +89,27 @@ const Header = () => {
     closeMobileMenu();
   };
 
+  const handleCoursesDropdown = (e) => {
+    e.preventDefault();
+    setIsCoursesDropdownOpen(!isCoursesDropdownOpen);
+  };
+
+  const handleCourseClick = (courseId) => {
+    setIsCoursesDropdownOpen(false);
+    closeMobileMenu();
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isCoursesDropdownOpen && !event.target.closest('.courses-dropdown')) {
+        setIsCoursesDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isCoursesDropdownOpen]);
+
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <nav className="main-nav">
@@ -96,11 +146,29 @@ const Header = () => {
               <span>About</span>
             </Link>
           </li>
-          <li>
-            <Link to="/#courses" onClick={handleSmoothScroll}>
+          <li className="courses-dropdown">
+            <button 
+              className="dropdown-toggle" 
+              onClick={handleCoursesDropdown}
+              aria-expanded={isCoursesDropdownOpen}
+            >
               <FaBook className="nav-icon" />
               <span>Courses</span>
-            </Link>
+              <FaChevronDown className={`dropdown-arrow ${isCoursesDropdownOpen ? 'open' : ''}`} />
+            </button>
+            
+            <div className={`dropdown-menu ${isCoursesDropdownOpen ? 'open' : ''}`}>
+              {courses.map((course) => (
+                <Link 
+                  key={course.courseId}
+                  to={`/course/${course.courseId}`}
+                  className="dropdown-item"
+                  onClick={() => handleCourseClick(course.courseId)}
+                >
+                  {course.title}
+                </Link>
+              ))}
+            </div>
           </li>
           <li>
             <Link to="/#contact" onClick={handleSmoothScroll}>

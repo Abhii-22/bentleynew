@@ -86,6 +86,23 @@ const Home = () => {
           <button className="explore-btn" onClick={exploreCourse}>Explore Course →</button>
         </div>
       </div>
+      
+      {/* Rotating Logos Section */}
+      <div className="rotating-logos-section">
+        <div className="rotating-logos-container">
+          <div className="logo-carousel">
+            <div className="carousel-logo">
+              <img src="/images/Bentley White.png" alt="Bentley Systems" />
+            </div>
+            <div className="carousel-logo">
+              <img src="/images/medini.png" alt="Medini" />
+            </div>
+            <div className="carousel-logo">
+              <img src="/images/Medini logo White-1[1] (1).png" alt="medini logo" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

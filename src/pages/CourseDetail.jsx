@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { FaPhoneAlt } from 'react-icons/fa';
+import { FaPhoneAlt, FaClock, FaGraduationCap, FaUsers, FaBuilding, FaRocket } from 'react-icons/fa';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import './CourseDetail.css';
 
@@ -186,17 +186,17 @@ const CourseDetail = () => {
             <p className="course-description">{course.description}</p>
             <div className="info-cards">
               <div className="info-card">
-                <div className="info-icon">⏱️</div>
+                <FaClock className="info-icon" />
                 <span>Duration</span>
                 <strong>{course.duration}</strong>
               </div>
               <div className="info-card">
-                <div className="info-icon">🎓</div>
+                <FaGraduationCap className="info-icon" />
                 <span>Level</span>
                 <strong>{course.level}</strong>
               </div>
               <div className="info-card">
-                <div className="info-icon">👥</div>
+                <FaUsers className="info-icon" />
                 <span>Audience</span>
                 <strong dangerouslySetInnerHTML={{ __html: course.audience }} />
               </div>
@@ -224,26 +224,15 @@ const CourseDetail = () => {
           <aside className="course-sidebar">
             <div className="sidebar-widget">
               <div className="sidebar-header">
-                <div className="provider-icon">🏢</div>
+                <FaBuilding className="provider-icon" />
                 <h3>Course Information</h3>
               </div>
               <div className="provider-info">
                 <span className="provider-label">Provider</span>
                 <span className="provider-name">{course.provider}</span>
               </div>
-              <div className="prerequisites-section">
-                <h4>📋 Prerequisites</h4>
-                <ul>
-                  {course.prerequisites.map((item, index) => (
-                    <li key={index}>
-                      <span className="prereq-icon">✓</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
               <button className="enroll-now-btn">
-                <span className="btn-icon">🚀</span>
+                <FaRocket className="btn-icon" />
                 Enroll Now
               </button>
             </div>

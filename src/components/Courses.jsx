@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { FaClock, FaUsers, FaCheckCircle, FaStar, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import './Courses.css';
 
 const courseData = [
@@ -76,7 +77,9 @@ const Courses = () => {
       </div>
 
       <div className="courses-container">
-        <button className="arrow-btn overlay left" onClick={scrollLeft}>⟵</button>
+        <button className="arrow-btn overlay left" onClick={scrollLeft}>
+          <FaChevronLeft />
+        </button>
 
         <div className="courses-grid" ref={scrollRef}>
           {courseData.map((course, index) => (
@@ -90,12 +93,14 @@ const Courses = () => {
               <div className="card-content">
                 <h3 className="course-title">{course.title}</h3>
                 <div className="course-meta">
-                  <span>🕒 {course.duration}</span>
-                  <span>👥 {course.students}</span>
-                  <span>✅ {course.successRate}</span>
+                  <span><FaClock /> {course.duration}</span>
+                  <span><FaUsers /> {course.students}</span>
+                  <span><FaCheckCircle /> {course.successRate}</span>
                 </div>
                 <div className="course-rating">
-                  <span className="stars">★★★★☆</span>
+                  <span className="stars">
+                    <FaStar /><FaStar /><FaStar /><FaStar /><FaStar style={{ opacity: 0.3 }} />
+                  </span>
                   <span className="rating-text">{course.rating}</span>
                 </div>
                 <div className="course-tags">
@@ -111,7 +116,9 @@ const Courses = () => {
           ))}
         </div>
 
-        <button className="arrow-btn overlay right" onClick={scrollRight}>⟶</button>
+        <button className="arrow-btn overlay right" onClick={scrollRight}>
+          <FaChevronRight />
+        </button>
       </div>
     </section>
   );

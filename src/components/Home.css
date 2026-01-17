@@ -128,3 +128,147 @@
     padding: 0.7rem 1.5rem;
   }
 }
+
+/* Rotating Logos Section */
+.rotating-logos-section {
+  position: absolute;
+  right: 10rem;
+  top: 69%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.rotating-logos-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo-carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  animation: rotateLogosVertical 12s linear infinite;
+}
+
+.carousel-logo {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  opacity: 0.9;
+}
+
+.carousel-logo img {
+  width: auto;
+  height: auto;
+  max-width: 80px;
+  max-height: 80px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.carousel-logo:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(59, 130, 246, 0.6);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+@keyframes rotateLogosVertical {
+  0% {
+    transform: translateY(0);
+  }
+  33% {
+    transform: translateY(-80px);
+  }
+  66% {
+    transform: translateY(-160px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsive for rotating logos */
+@media (max-width: 768px) {
+  .rotating-logos-section {
+    right: 1.5rem;
+    top: 70%;
+  }
+  
+  .logo-carousel {
+    gap: 1rem;
+  }
+  
+  .carousel-logo {
+    height: 60px;
+    width: 60px;
+  }
+  
+  .carousel-logo img {
+    max-width: 35px;
+    max-height: 35px;
+  }
+  
+  @keyframes rotateLogosVertical {
+    0% {
+      transform: translateY(0);
+    }
+    33% {
+      transform: translateY(-50px);
+    }
+    66% {
+      transform: translateY(-100px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .rotating-logos-section {
+    right: 0.8rem;
+    top: 65%;
+  }
+  
+  .logo-carousel {
+    gap: 0.8rem;
+  }
+  
+  .carousel-logo {
+    height: 50px;
+    width: 50px;
+  }
+  
+  .carousel-logo img {
+    max-width: 30px;
+    max-height: 30px;
+  }
+  
+  @keyframes rotateLogosVertical {
+    0% {
+      transform: translateY(0);
+    }
+    33% {
+      transform: translateY(-40px);
+    }
+    66% {
+      transform: translateY(-80px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
