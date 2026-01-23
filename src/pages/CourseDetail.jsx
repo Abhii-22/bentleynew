@@ -8,18 +8,12 @@ const CourseDetail = () => {
   const navigate = useNavigate();
 
   const handleContactClick = () => {
-    // Navigate to home page first
-    navigate('/');
+    // Navigate to contact page
+    navigate('/contact');
     
-    // Then scroll to contact section after a short delay
+    // Scroll to top after navigation
     setTimeout(() => {
-      const contactElement = document.getElementById('contact');
-      if (contactElement) {
-        contactElement.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
+      window.scrollTo(0, 0);
     }, 100);
   };
 

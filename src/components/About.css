@@ -2,6 +2,7 @@
   background: #ffffff;
   color: #000000;
   padding: 6rem 2rem;
+  margin-top: 120px; /* Clear space for fixed header */
   font-family: 'Poppins', sans-serif;
   width: 100%;
 }

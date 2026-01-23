@@ -141,10 +141,15 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link to="/#about" onClick={handleSmoothScroll}>
+            <a 
+              href="/about" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={closeMobileMenu}
+            >
               <FaInfoCircle className="nav-icon" />
               <span>About</span>
-            </Link>
+            </a>
           </li>
           <li className="courses-dropdown">
             <button 
@@ -171,10 +176,15 @@ const Header = () => {
             </div>
           </li>
           <li>
-            <Link to="/#contact" onClick={handleSmoothScroll}>
+            <a 
+              href="/contact" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={closeMobileMenu}
+            >
               <FaEnvelope className="nav-icon" />
               <span>Contact</span>
-            </Link>
+            </a>
           </li>
         </ul>
       </nav>
