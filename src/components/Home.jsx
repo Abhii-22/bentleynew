@@ -98,7 +98,7 @@ const Home = () => {
               <img src="/images/medini.png" alt="Medini" />
             </div>
             <div className="carousel-logo">
-              <img src="/images/Medini logo White-1[1] (1).png" alt="medini logo" />
+              <img src="/images/Credly White.png" alt="medini logo" />
             </div>
           </div>
         </div>
