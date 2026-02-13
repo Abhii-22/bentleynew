@@ -68,27 +68,6 @@ const Header = () => {
     }
   };
 
-  const handleSmoothScroll = (e) => {
-    e.preventDefault();
-    const href = e.currentTarget.getAttribute('href');
-    const targetId = href.replace(/.*#/, '');
-
-    if (targetId) {
-      const elem = document.getElementById(targetId);
-      if (elem) {
-        elem.scrollIntoView({
-          behavior: 'smooth',
-        });
-      }
-    } else {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-      });
-    }
-    closeMobileMenu();
-  };
-
   const handleCoursesDropdown = (e) => {
     e.preventDefault();
     setIsCoursesDropdownOpen(!isCoursesDropdownOpen);

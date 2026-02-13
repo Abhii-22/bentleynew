@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import { Link } from 'react-router-dom';
 import { FaClock, FaUsers, FaCheckCircle, FaStar, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import './Courses.css';
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { FaPhoneAlt, FaClock, FaGraduationCap, FaUsers, FaBuilding, FaRocket, FaChevronDown, FaChevronUp } from 'react-icons/fa';
-import { Link, useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import './CourseDetail.css';
 
 const CourseDetail = () => {
