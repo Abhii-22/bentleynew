@@ -4,7 +4,7 @@
   top: 0;
   z-index: 1000;
   width: 100%;
-  background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+  background: rgb(35, 65, 75);
   backdrop-filter: blur(20px);
   padding: 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
@@ -20,8 +20,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(16, 185, 129, 0.05) 100%);
-  backdrop-filter: blur(10px);
+  background: transparent;
   z-index: -1;
 }
 
@@ -33,12 +32,12 @@
   max-width: 1400px;
   margin: 0 auto;
   position: relative;
-  padding: 0.8rem 2rem;
+  padding: 0.5rem 2rem;
 }
 
 /* Secondary navigation */
 .secondary-nav {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgb(35, 65, 75);
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -50,7 +49,7 @@
   gap: 0.25rem;
   list-style: none;
   margin: 0;
-  padding: 0.5rem 2rem;
+  padding: 0.35rem 2rem;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -69,12 +68,12 @@
 }
 
 .logo-image {
-  height: 40px; /* Adjust height as needed */
+  height: 34px;
   transition: transform 0.3s ease;
 }
 
 .medini-logo {
-  height: 50px; /* Adjust height to be proportional */
+  height: 42px;
 }
 
 .logo:hover .logo-image {
@@ -86,7 +85,7 @@
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   font-weight: 600;
-  padding: 0.5rem 1.25rem;
+  padding: 0.4rem 1rem;
   border-radius: 50px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -139,7 +138,7 @@
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   font-weight: 600;
-  padding: 0.5rem 1.25rem;
+  padding: 0.4rem 1rem;
   border-radius: 50px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -176,7 +175,7 @@
   top: 100%;
   left: 0;
   min-width: 280px;
-  background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+  background: rgb(35, 65, 75);
   backdrop-filter: blur(20px);
   border-radius: 12px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -218,13 +217,13 @@
 
 /* Scroll effect */
 .header.scrolled {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334135 100%);
+  background: rgb(35, 65, 75);
   backdrop-filter: blur(20px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
 .header.scrolled .main-nav {
-  padding: 0.8rem 2rem;
+  padding: 0.5rem 2rem;
 }
 
 .header.scrolled .logo {
@@ -233,7 +232,7 @@
 }
 
 .header.scrolled .secondary-nav a {
-  padding: 0.6rem 1rem;
+  padding: 0.4rem 1rem;
   font-size: 0.85rem;
 }
 
@@ -277,7 +276,7 @@
     top: 100%;
     left: 0;
     right: 0;
-    background: linear-gradient(135deg, #1e293b 0%, #334135 50%, #475569 100%);
+    background: rgb(35, 65, 75);
     backdrop-filter: blur(20px);
     flex-direction: column;
     gap: 0;

@@ -108,9 +108,14 @@ const Courses = () => {
                     <span className="tag" key={tag}>{tag}</span>
                   ))}
                 </div>
-                <Link to={`/course/${course.courseId}`} className="enroll-button">
-                  Explore Now →
-                </Link>
+                <a 
+                  href="https://register.medinitechnologies.in/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="enroll-button"
+                >
+                  Enroll Now →
+                </a>
               </div>
             </div>
           ))}
