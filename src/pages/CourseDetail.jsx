@@ -275,7 +275,7 @@ const CourseDetail = () => {
               <div className="info-card">
                 <FaUsers className="info-icon" />
                 <span>Audience</span>
-                <strong dangerouslySetInnerHTML={{ __html: course.audience }} />
+                <strong>{course.audience.replace(/<br \/>/g, ', ')}</strong>
               </div>
             </div>
             
