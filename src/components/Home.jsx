@@ -75,7 +75,7 @@ const Home = () => {
   const currentSlide = slides[currentSlideIndex];
 
   return (
-    <div id="home">
+    <div id="home" style={{ position: 'relative' }}>
       <div
         className="home-slider"
         style={{ backgroundImage: `url(${currentSlide.src})` }}
@@ -85,10 +85,8 @@ const Home = () => {
           <p>{currentSlide.text.description}</p>
           <button className="explore-btn" onClick={exploreCourse}>Explore Course →</button>
         </div>
-      </div>
-      
-      {/* Rotating Logos Section */}
-      <div className="rotating-logos-section">
+        {/* Rotating Logos - inside slider so they don't overlap PartnersSection */}
+        <div className="rotating-logos-section">
         <div className="rotating-logos-container">
           <div className="logo-carousel">
             <div className="carousel-logo">
@@ -102,6 +100,12 @@ const Home = () => {
             </div>
           </div>
         </div>
+        </div>
+      </div>
+
+      {/* Latest Images Section - Add your images here */}
+      <div className="latest-images-section">
+        {/* You can add your latest images here */}
       </div>
     </div>
   );
