@@ -73,7 +73,7 @@
 }
 
 .medini-logo {
-  height: 42px;
+  height: 55px;
 }
 
 .logo:hover .logo-image {
@@ -84,13 +84,13 @@
 .secondary-nav a {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   padding: 0.4rem 1rem;
   border-radius: 50px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   letter-spacing: 0.3px;
   display: flex;
   align-items: center;
@@ -136,7 +136,7 @@
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   letter-spacing: 0.3px;
   display: flex;
   align-items: center;

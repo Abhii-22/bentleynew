@@ -67,6 +67,11 @@ const CourseDetail = () => {
       description: 'Civil infrastructure design software for roadways, offering 3D modeling, terrain modeling, drainage, and corridor modeling in a single platform. This comprehensive solution enables engineers to design, analyze, and document transportation projects with unprecedented efficiency and accuracy.',
       detailedDescription: 'OpenRoads Designer represents the next generation of civil design software, integrating traditional CAD workflows with advanced BIM capabilities. It provides a complete environment for road and highway design, from initial planning through construction documentation, ensuring data continuity throughout the project lifecycle.',
       image: '/images/road.png',
+      heroImage: '/images/openroads.jpg',
+      heroContent: {
+        subtitle: 'Advanced Civil Engineering Design',
+        description: 'Master the future of infrastructure design with cutting-edge 3D modeling and BIM integration'
+      },
       duration: '1 Months',
       level: 'Advanced',
       audience: '(infrastructure/Highway),<br />Civil Engineers (CIV)',
@@ -102,7 +107,12 @@ const CourseDetail = () => {
       category: 'Engineering Software',
       description: 'Water distribution modeling software that helps engineers plan, design, and optimize water systems with advanced hydraulic modeling capabilities. This powerful tool enables comprehensive analysis of water networks, ensuring reliable and efficient water distribution systems.',
       detailedDescription: 'WaterGEMS provides engineers with sophisticated tools for water distribution system analysis and design. It combines hydraulic modeling capabilities with GIS integration, allowing for comprehensive water system management from source to tap, including pressure management, water quality analysis, and system optimization.',
-      image: '/images/water.jpg',
+      image: '/images/pipe.jpg',
+      heroImage: '/images/watergems.jpg',
+      heroContent: {
+        subtitle: 'Intelligent Water Distribution Modeling',
+        description: 'Design and optimize water systems with advanced hydraulic analysis and GIS integration'
+      },
       duration: '1 Months',
       level: 'Advanced',
       audience: 'Water Engineers, Civil Engineers (CIV/ENV)',
@@ -139,7 +149,12 @@ const CourseDetail = () => {
       category: 'Structural Analysis',
       description: 'Comprehensive structural analysis and design software for buildings, bridges, towers, and other structures with advanced modeling capabilities. This industry-standard tool enables engineers to perform complex structural analyses and optimize designs for safety and efficiency.',
       detailedDescription: 'STAAD Pro is the world\'s most popular structural analysis and design software, offering a complete solution for structural engineering. It supports multiple international design codes and provides advanced analysis capabilities including dynamic analysis, finite element analysis, and optimization algorithms for various structure types.',
-      image: '/images/stadpro.jpg',
+      image: '/images/staadpro.jpg',
+      heroImage: '/images/stadprooo.jpg',
+      heroContent: {
+        subtitle: 'Comprehensive Structural Analysis',
+        description: 'Analyze and design complex structures with industry-leading engineering software'
+      },
       duration: '1 Months',
       level: 'Advanced',
       audience: 'Structural Engineers,<br />Civil Engineers (CIV)',
@@ -176,6 +191,11 @@ const CourseDetail = () => {
       description: 'Professional CAD software for 2D and 3D design, drafting, and modeling with advanced visualization and documentation capabilities. This powerful platform serves as the foundation for infrastructure design projects across various engineering disciplines.',
       detailedDescription: 'MicroStation is a comprehensive CAD platform that provides precision design and documentation capabilities for infrastructure projects. It offers advanced 3D modeling, visualization, and collaboration tools, making it the preferred choice for large-scale engineering projects requiring high accuracy and interoperability.',
       image: '/images/micro1.png',
+      heroImage: '/images/microstation.jpg',
+      heroContent: {
+        subtitle: 'Professional CAD Design Platform',
+        description: 'Create precise 2D/3D designs with advanced visualization and collaboration tools'
+      },
       duration: '1 Months',
       level: 'Advanced',
       audience: 'CAD Professionals, Engineers (ALL)',
@@ -212,6 +232,11 @@ const CourseDetail = () => {
       description: 'Comprehensive sewer system modeling software for planning, design, and analysis of wastewater collection systems. This specialized tool enables engineers to optimize sewer networks for efficiency, reliability, and environmental compliance.',
       detailedDescription: 'SewerGEMS provides advanced hydraulic modeling capabilities specifically designed for wastewater and stormwater systems. It combines sophisticated analysis tools with GIS integration, allowing engineers to design, analyze, and optimize complex sewer networks while ensuring regulatory compliance and system reliability.',
       image: '/images/open gem.jpg',
+      heroImage: '/images/save.jpg',
+      heroContent: {
+        subtitle: 'Advanced Wastewater System Modeling',
+        description: 'Design efficient sewer networks with specialized hydraulic analysis and environmental compliance'
+      },
       duration: '1 Months',
       level: 'Advanced',
       audience: 'Environmental Engineers, Civil Engineers (CIV/ENV)',
@@ -247,7 +272,24 @@ const CourseDetail = () => {
   const course = coursesData[courseId] || coursesData['watergems'];
 
   return (
-    <div className="course-detail-page">
+    <>
+      {/* Full Screen Hero Section with Background Image */}
+      <div 
+        className="course-hero-section"
+        style={{ backgroundImage: `url(${course.heroImage})` }}
+      >
+        <div className="course-hero-overlay">
+          <div className="hero-content-left">
+            <h1 className="course-hero-title">{course.title}</h1>
+            <p className="course-hero-subtitle">{course.heroContent.subtitle}</p>
+            <p className="course-hero-description">{course.heroContent.description}</p>
+            <p className="course-hero-tagline">Transform Your Engineering Career Today</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Course Detail Content */}
+      <div className="course-detail-page">
       <div className="course-detail-container">
         <div className="course-detail-content">
           <div className="course-content-left" ref={leftContentRef} onScroll={handleScroll}>
@@ -377,7 +419,8 @@ const CourseDetail = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 
