@@ -1028,6 +1028,47 @@
 }
 
 @media (max-width: 768px) {
+  .course-hero-section {
+    height: 100vh;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: scroll;
+  }
+  
+  .course-hero-overlay {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .hero-content-left {
+    max-width: 90%;
+    text-align: center;
+    padding-left: 0;
+  }
+  
+  .course-hero-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+  
+  .course-hero-subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  .course-hero-description {
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.5;
+  }
+  
+  .course-hero-tagline {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
   .course-detail-page {
     padding: 6rem 1rem 2rem;
     height: auto;
