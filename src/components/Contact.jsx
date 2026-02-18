@@ -29,7 +29,7 @@ const Contact = () => {
                 <div>
                   <h4>Address</h4>
                   <p>
-                    XGCP+9J3, MRCR Layout, MC Layout, Vijayanagar, Bengaluru,
+                    MRCR Layout, MC Layout, Vijayanagar, Bengaluru,
                     Karnataka 560040
                   </p>
                 </div>
