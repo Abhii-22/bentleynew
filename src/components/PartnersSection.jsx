@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./PartnersSection.css";
 
 // Import all available logos from Logos folder
@@ -62,7 +62,7 @@ const PARTNERS = [
 ];
 
 function PartnersSection() {
-  // Create rows of 4 logos for horizontal layout in each row
+  // Create rows of 4 logos for desktop, 2 logos for mobile
   const createRowsOfFour = (partners) => {
     const rows = [];
     for (let i = 0; i < partners.length; i += 4) {
@@ -71,7 +71,25 @@ function PartnersSection() {
     return rows;
   };
 
-  const partnerRows = createRowsOfFour(PARTNERS);
+  const createRowsOfTwo = (partners) => {
+    const rows = [];
+    for (let i = 0; i < partners.length; i += 2) {
+      rows.push(partners.slice(i, i + 2));
+    }
+    return rows;
+  };
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 560);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 560);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const partnerRows = isMobile ? createRowsOfTwo(PARTNERS) : createRowsOfFour(PARTNERS);
   // Duplicate the rows for seamless vertical scrolling
   const duplicatedRows = [...partnerRows, ...partnerRows];
 

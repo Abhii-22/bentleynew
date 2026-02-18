@@ -171,14 +171,18 @@
     font-size: 34px;
   }
   .partners-scrolling-card {
-    width: 400px; /* Wider card on small mobile */
+    width: calc(100vw - 40px);
+    max-width: 320px;
     height: 320px;
+    margin: 0 auto;
   }
   .partner-grid-tile {
-    width: 150px;
+    width: 100%;
+    justify-content: space-between;
   }
   .partner-mini-card {
     height: 70px;
+    width: 48%; /* Almost half width for 2 logos per row */
   }
   .partner-scrolling-logo {
     max-height: 40px;
@@ -187,14 +191,18 @@
 
 @media (max-width: 480px) {
   .partners-scrolling-card {
-    width: 320px; /* Wider card on mobile */
+    width: calc(100vw - 30px);
+    max-width: 300px;
     height: 250px;
+    margin: 0 auto;
   }
   .partner-grid-tile {
-    width: 150px;
+    width: 100%;
+    justify-content: space-between;
   }
   .partner-mini-card {
     height: 60px;
+    width: 48%; /* Almost half width for 2 logos per row */
   }
   .partner-scrolling-logo {
     max-height: 32px;
