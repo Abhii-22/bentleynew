@@ -104,9 +104,8 @@
 
 .secondary-nav a:hover {
   color: #fff;
-  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  transform: none;
+  box-shadow: none;
 }
 
 .secondary-nav a:active {
@@ -148,9 +147,8 @@
 
 .dropdown-toggle:hover {
   color: #fff;
-  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  transform: none;
+  box-shadow: none;
 }
 
 .dropdown-arrow {

@@ -122,8 +122,6 @@ const Header = () => {
           <li>
             <a 
               href="/about" 
-              target="_blank" 
-              rel="noopener noreferrer"
               onClick={closeMobileMenu}
             >
               <FaInfoCircle className="nav-icon" />
