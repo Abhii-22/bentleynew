@@ -341,6 +341,10 @@
     font-size: 2rem;
   }
   
+  .testimonials-section .text-center p {
+    text-align: justify;
+  }
+  
   .testimonials-section .p-8 {
     padding: 1.5rem;
   }

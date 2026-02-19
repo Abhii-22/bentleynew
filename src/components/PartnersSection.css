@@ -153,9 +153,11 @@
   .partners-content {
     min-width: 0;
   }
-  .partners-title,
-  .partners-description {
+  .partners-title {
     text-align: left;
+  }
+  .partners-description {
+    text-align: justify;
   }
   .partners-scrolling-card {
     width: 500px; /* Wider card */

@@ -6,11 +6,18 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <div className="footer-about">
-          <h3>Medini Technologies</h3>
-          <p>
-           Leading the future of digital infrastructure with innovative engineering solutions.
-          </p>
+        <div className="footer-services">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="https://mediniedutech.com/" rel="noopener noreferrer">Medini EduTech</a> - Training and Certifications</li>
+            <li><a href="https://bimconstruct.in/"  rel="noopener noreferrer">BIM Construct</a> - Interior and Exterior Designing</li>
+            <li><a href="https://nalaneel.com/"  rel="noopener noreferrer">TechVruddhi</a> - Software Development</li>
+            <li><a href="https://eduphygital.com/"  rel="noopener noreferrer">EDUPHYGITAL</a> - Centre of Excellence</li>
+            <li><a href="https://digidhvani.com/"  rel="noopener noreferrer">DigiDhvani</a> - Digital Marketing</li>
+            <li><a href="https://builddspace.in/"  rel="noopener noreferrer">BuilddSpace</a> - Incubation Centre</li>
+          
+           
+          </ul>
         </div>
 
         <div className="footer-links">

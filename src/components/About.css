@@ -132,6 +132,7 @@
   color: #333333;
   font-size: 1rem;
   margin-top: 0.5rem;
+  text-align: justify;
 }
 
 /* Right Side */
@@ -157,6 +158,7 @@
   line-height: 1.8;
   margin-bottom: 1.2rem;
   font-size: 1.05rem;
+  text-align: justify;
 }
 
 /* Highlights */
@@ -188,6 +190,7 @@
 
 .highlight-card p {
   color: #333333;
+  text-align: justify;
 }
 
 /* Mission and Vision Section */
@@ -285,6 +288,7 @@
   line-height: 1.8;
   text-align: center;
   margin-bottom: 2rem;
+  text-align: justify;
 }
 
 .mission-points,
@@ -373,5 +377,23 @@
 
   .stat-card {
     min-width: 150px;
+  }
+
+  /* Add justify alignment for mobile view */
+  .about-text-section p {
+    text-align: justify;
+  }
+
+  .highlight-card p {
+    text-align: justify;
+  }
+
+  .mission-card p,
+  .vision-card p {
+    text-align: justify;
+  }
+
+  .stat-card p {
+    text-align: justify;
   }
 }
