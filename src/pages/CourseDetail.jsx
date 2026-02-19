@@ -58,7 +58,10 @@ const CourseDetail = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+    if (leftContentRef.current) {
+      leftContentRef.current.scrollTo(0, 0);
+    }
+  }, [courseId]);
 
   const coursesData = {
     'openroads-designer': {

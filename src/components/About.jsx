@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { FaBullseye, FaEye, FaCheck, FaStar } from 'react-icons/fa';
 import './About.css';
 
 const About = () => {
@@ -113,6 +114,82 @@ const About = () => {
                 <p>
                   Our job assistance program ensures you are ready for global engineering opportunities.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Mission and Vision Section */}
+        <div className="mission-vision-section animate-on-scroll">
+          <div className="mission-vision-grid">
+            {/* Mission */}
+            <div className="mission-card">
+              <div className="mission-icon">
+                <div className="icon-wrapper">
+                  <FaBullseye />
+                </div>
+              </div>
+              <h3>Our Mission</h3>
+              <p>
+                To empower engineers and professionals with comprehensive Bentley software training, 
+                bridging the gap between academic knowledge and industry requirements. We strive to 
+                create skilled professionals who can tackle real-world infrastructure challenges with 
+                confidence and expertise.
+              </p>
+              <div className="mission-points">
+                <div className="point-item">
+                  <span className="check-icon">
+                    <FaCheck />
+                  </span>
+                  <span>Industry-relevant curriculum</span>
+                </div>
+                <div className="point-item">
+                  <span className="check-icon">
+                    <FaCheck />
+                  </span>
+                  <span>Hands-on practical training</span>
+                </div>
+                <div className="point-item">
+                  <span className="check-icon">
+                    <FaCheck />
+                  </span>
+                  <span>Career development support</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Vision */}
+            <div className="vision-card">
+              <div className="vision-icon">
+                <div className="icon-wrapper">
+                  <FaEye />
+                </div>
+              </div>
+              <h3>Our Vision</h3>
+              <p>
+                To become the leading Bentley training center globally, recognized for excellence in 
+                infrastructure education and for producing world-class engineers who shape the future 
+                of sustainable infrastructure development worldwide.
+              </p>
+              <div className="vision-points">
+                <div className="point-item">
+                  <span className="star-icon">
+                    <FaStar />
+                  </span>
+                  <span>Global leadership in training</span>
+                </div>
+                <div className="point-item">
+                  <span className="star-icon">
+                    <FaStar />
+                  </span>
+                  <span>Innovation in education</span>
+                </div>
+                <div className="point-item">
+                  <span className="star-icon">
+                    <FaStar />
+                  </span>
+                  <span>Sustainable infrastructure focus</span>
+                </div>
               </div>
             </div>
           </div>

@@ -155,8 +155,6 @@ const Header = () => {
           <li>
             <a 
               href="/contact" 
-              target="_blank" 
-              rel="noopener noreferrer"
               onClick={closeMobileMenu}
             >
               <FaEnvelope className="nav-icon" />
