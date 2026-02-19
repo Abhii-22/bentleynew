@@ -193,7 +193,7 @@ const CourseDetail = () => {
       category: 'CAD Software',
       description: 'Professional CAD software for 2D and 3D design, drafting, and modeling with advanced visualization and documentation capabilities. This powerful platform serves as the foundation for infrastructure design projects across various engineering disciplines.',
       detailedDescription: 'MicroStation is a comprehensive CAD platform that provides precision design and documentation capabilities for infrastructure projects. It offers advanced 3D modeling, visualization, and collaboration tools, making it the preferred choice for large-scale engineering projects requiring high accuracy and interoperability.',
-      image: '/images/micro1.png',
+      image: '/images/micro.jpg',
       heroImage: '/images/microstation.jpg',
       heroContent: {
         subtitle: 'Professional CAD Design Platform',
@@ -234,7 +234,7 @@ const CourseDetail = () => {
       category: 'Hydraulic Modeling',
       description: 'Comprehensive sewer system modeling software for planning, design, and analysis of wastewater collection systems. This specialized tool enables engineers to optimize sewer networks for efficiency, reliability, and environmental compliance.',
       detailedDescription: 'SewerGEMS provides advanced hydraulic modeling capabilities specifically designed for wastewater and stormwater systems. It combines sophisticated analysis tools with GIS integration, allowing engineers to design, analyze, and optimize complex sewer networks while ensuring regulatory compliance and system reliability.',
-      image: '/images/open gem.jpg',
+      image: '/images/save.jpg',
       heroImage: '/images/save.jpg',
       heroContent: {
         subtitle: 'Advanced Wastewater System Modeling',
