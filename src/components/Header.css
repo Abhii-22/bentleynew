@@ -223,8 +223,13 @@
 }
 
 .header.scrolled .secondary-nav a {
-  padding: 0.4rem 1rem;
-  font-size: 0.85rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1.1rem;
+}
+
+.header.scrolled .dropdown-toggle {
+  padding: 0.6rem 1.2rem;
+  font-size: 1.1rem;
 }
 
 /* Mobile menu button */
