@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { FaPhoneAlt, FaClock, FaGraduationCap, FaUsers, FaBuilding, FaRocket, FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import React, { useEffect, useRef } from 'react';
+import { FaPhoneAlt, FaClock, FaGraduationCap, FaUsers, FaRocket } from 'react-icons/fa';
 import { useParams, useNavigate } from 'react-router-dom';
 import './CourseDetail.css';
 
@@ -7,11 +7,6 @@ const CourseDetail = () => {
     const { courseId } = useParams();
   const navigate = useNavigate();
   const leftContentRef = useRef(null);
-  const [showScrollTop, setShowScrollTop] = useState(false);
-  const [showScrollBottom, setShowScrollBottom] = useState(true);
-  const [scrollProgress, setScrollProgress] = useState(0);
-  const [lastScrollTop, setLastScrollTop] = useState(0);
-  const [isScrollingDown, setIsScrollingDown] = useState(false);
 
   const handleContactClick = () => {
     // Navigate to contact page
@@ -21,39 +16,6 @@ const CourseDetail = () => {
     setTimeout(() => {
       window.scrollTo(0, 0);
     }, 100);
-  };
-
-  const handleScroll = () => {
-    const element = leftContentRef.current;
-    if (element) {
-      const scrollTop = element.scrollTop;
-      const scrollHeight = element.scrollHeight;
-      const clientHeight = element.clientHeight;
-      
-      // Determine scroll direction
-      const scrollDirection = scrollTop > lastScrollTop;
-      setIsScrollingDown(scrollDirection);
-      setLastScrollTop(scrollTop);
-      
-      setShowScrollTop(scrollTop > 50);
-      setShowScrollBottom(scrollTop < scrollHeight - clientHeight - 50);
-      
-      // Calculate scroll progress
-      const progress = (scrollTop / (scrollHeight - clientHeight)) * 100;
-      setScrollProgress(Math.min(100, Math.max(0, progress)));
-    }
-  };
-
-  const scrollToTop = () => {
-    if (leftContentRef.current) {
-      leftContentRef.current.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  };
-
-  const scrollToBottom = () => {
-    if (leftContentRef.current) {
-      leftContentRef.current.scrollTo({ top: leftContentRef.current.scrollHeight, behavior: 'smooth' });
-    }
   };
 
   useEffect(() => {
@@ -295,7 +257,7 @@ const CourseDetail = () => {
       <div className="course-detail-page">
       <div className="course-detail-container">
         <div className="course-detail-content">
-          <div className="course-content-left" ref={leftContentRef} onScroll={handleScroll}>
+          <div className="course-content-left" ref={leftContentRef}>
             <div className="course-header">
               <button onClick={() => navigate(-1)} className="back-link">&larr; Back to Courses</button>
               <span className="course-category">{course.category}</span>
@@ -368,47 +330,7 @@ const CourseDetail = () => {
               </ul>
             </div>
             
-            {/* Scroll Progress Bar */}
-            <div 
-              className="scroll-progress" 
-              style={{ transform: `scaleX(${scrollProgress / 100})` }}
-            />
-            
-            {/* Enhanced Scroll Indicators */}
-            {showScrollTop && !isScrollingDown && (
-              <div 
-                className="scroll-indicator top" 
-                onClick={scrollToTop}
-                data-tooltip="Scroll to top"
-              >
-                <FaChevronUp />
-              </div>
-            )}
-            {showScrollBottom && !isScrollingDown && (
-              <div 
-                className="scroll-indicator bottom" 
-                onClick={scrollToBottom}
-                data-tooltip="Scroll to bottom"
-              >
-                <FaChevronDown />
-              </div>
-            )}
-          </div>
-          
-          <div className="course-content-right">
-            <div className="course-image-container">
-              <img src={course.image} alt={course.title} className="course-image" />
-            </div>
-            
-            <div className="sidebar-widget">
-              <div className="sidebar-header">
-                <FaBuilding className="provider-icon" />
-                <h3>Course Information</h3>
-              </div>
-              <div className="provider-info">
-                <span className="provider-label">Provider</span>
-                <span className="provider-name">{course.provider}</span>
-              </div>
+            <div className="enroll-section">
               <a 
                 href="https://register.medinitechnologies.in/" 
                 target="_blank" 
